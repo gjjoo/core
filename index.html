@@ -56,6 +56,20 @@
         var 영어문자열 = 'abcdefg';
         console.log(문자열.getByte());
         console.log(영어문자열.getByte());
+        
+        var 주민등록번호1 = '880411-1912777';
+        var 주민등록번호2 = '880411-1912777-123';
+        var 주민등록번호3 = '880411A-191277';
+        var 주민등록번호4 = 'abcd-191277';
+        var 주민등록번호5 = '880411-def';
+        var 주민등록번호6 = '880411_191211';
+        console.log( isValidPersonalNo(주민등록번호1) );
+        console.log( isValidPersonalNo(주민등록번호2) );
+        console.log( isValidPersonalNo(주민등록번호3) );
+        console.log( isValidPersonalNo(주민등록번호4) );
+        console.log( isValidPersonalNo(주민등록번호5) );
+        console.log( isValidPersonalNo(주민등록번호6) );
+        
     </script>
 </head>
 <body>

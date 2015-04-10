@@ -75,6 +75,16 @@ function isValidEmail(str) {
     return isValidFormat(str, reg);
 }
 
+/**
+ * 해당 문자열이 주민등록번호 형식인지 체크한다
+ * @param {String}
+ * @return {Boolean}
+ */
+function isValidPersonalNo(str) {
+    var reg = /^(\d{6})-(\d{7})$/;
+    return isValidFormat(str, reg);
+}
+
 
 /*
         .@@@@#          %@@+                                                  .@@@=
