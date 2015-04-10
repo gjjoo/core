@@ -21,17 +21,41 @@
         
         var numArr = [9,3,6,8,3,2,11];
         console.log(getMaxOfArray(numArr));
-        console.log(getMinOfArray(numArr));
         
-        var num = 987654321;
-        console.log(num.money());
+        var num = 98765432123456789;
+        console.log(num.toLocaleString());
         
         var aaa= [1,2,3];
         console.log(aaa);
         aaa.clear();
         console.log(aaa);
         
+        console.log( (1234567890).byte() );
         
+        console.log( (10).div(0) );
+        
+        var phone = '010-7108-2764';
+        var tel = '055-687-2764';
+        console.log( isValidPhone(phone) );
+        console.log( isValidPhone(tel) );
+        
+        var email1 = 'abc@naver.com';
+        var email2 = 'bar.ba@naver.com';
+        var email3 = 'bar.baba@google.co.kr';
+        var email4 = '@abc@naver.com';
+        var email5 = 'bar@ba@naver.com';
+        var email6 = 'bar.b/aba@goo_g-le.co.kr';
+        console.log( isValidEmail(email1) );
+        console.log( isValidEmail(email2) );
+        console.log( isValidEmail(email3) );
+        console.log( isValidEmail(email4) );
+        console.log( isValidEmail(email5) );
+        console.log( isValidEmail(email6) );
+        
+        var 문자열 = '가나다라마바사';
+        var 영어문자열 = 'abcdefg';
+        console.log(문자열.getByte());
+        console.log(영어문자열.getByte());
     </script>
 </head>
 <body>
