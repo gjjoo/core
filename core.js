@@ -13,6 +13,14 @@
  .++=:.                                                                                                  +@@@@
                                                                                                 ***==:..#@@@@
                                                                                                 +*#@@@@@@@@#
+                                                                                                
+ String.prototype.format    {숫자} 중괄호의 숫자를 넘어온 인수로 변환시킨다
+ String.prototype.getByte   문자열의 바이트 길이를 반환한다
+ isValidFormat(str, reg)    사용자가 정의한 포맷 형식인지 체크한다
+ isValidPhone(str)          해당 문자열이 전화번호 형식(숫자-숫자-숫자)인지 체크한다
+ isValidEmail(str)          해당 문자열이 이메일 형식인지 체크한다
+ isValidPersonalNo(str)     해당 문자열이 주민등록번호 형식인지 체크한다
+
 */
 /**
  * {숫자} 중괄호의 숫자를 넘어온 인수로 변환시킨다
@@ -95,7 +103,11 @@ function isValidPersonalNo(str) {
   :@@@.     *@@%%@@*    :@@@:   =%@@@@@   =@@@*   :@@@+    @@@+   =@@@      =@@@+  %@@@@#%%#+=.         @@@@
   @@@*      .@@@@@*     @@@@=#@@@#=@@@=  :@@@+   :@@@=    *@@@    @@@: :=*@@@%=     .@@@=   .:+#@@%    @@@%
  +%%#        *@@@+      :*###*=   .%%*   +*++    =**=     :++=    =*##%#*+=.          +#%@@@%#*=.     @@@#
-  
+
+
+ Number.prototype.byte  숫자값을 Byte로 인식하여 값의 크기에 따라 KB,MB,GB의 형식으로 반환합니다
+ Number.prototype.div   나누기 연산결과를 반환합니다. 단, 인수가 0인경우 연산결과는 오류 없이 0을 반환합니다.
+
 */
 /**
  * 숫자값을 Byte로 인식하여 값의 크기에 따라 KB,MB,GB의 형식으로 반환합니다
@@ -147,6 +159,12 @@ Number.prototype.div = function() {
                                                                                                           *@@@@+
                                                                                                           @@@@@
                                                                                                          =@@@@*
+ getMaxOfArray(numArray)    배열값중 최대값을 반환한다
+ getMinOfArray(numArray)    배열값중 최소값을 반환한다
+ Array.prototype.clear      배열안의 값을 지운다
+ Array.prototype.first      배열의 첫번값을 반환한다
+ Array.prototype.last       배열의 마지막값을 반환한다
+
 */
 /**
  * 배열값중 최대값을 반환한다
@@ -204,7 +222,15 @@ Array.prototype.last = function () {
   #@@@@%       =@@@@@@=          #@@@@.     %@@@@@@@@@@@@#:=@@@@#         =@@@@@*          .@@@@@*           %@@@@#
  .%%%%%:        :===.            +%%#=        .====++:.     :**+.          *%%%%*           +***=             ....
 
- */
+
+ getRandom()                    0 ~ 1사이의 숫자중 임의의 값을 반환한다
+ getRandomArbitrary(min, max)   최소값과 최대값 사이의 숫자중 임의의 값을 반환한다
+ getRandomInt(min, max)         최소값과 최대값 사이의 정수형 숫자중 임의의 값을 반환한다
+ Math.round10                   반올림 소숫점 제어
+ Math.floor10                   내림 소숫점 제어
+ Math.ceil10                    올림 소숫점 제어
+
+*/
 /**
  * 0 ~ 1사이의 숫자중 임의의 값을 반환한다
  * @return {Number}
