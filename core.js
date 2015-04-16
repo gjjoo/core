@@ -196,14 +196,14 @@ Array.prototype.clear = function () {
  * 배열의 첫번값을 반환한다
  */
 Array.prototype.first = function () {
-	return this[0];
+    return this[0];
 };
 
 /**
  * 배열의 마지막값을 반환한다
  */
 Array.prototype.last = function () {
-	return this[this.length - 1];
+    return this[this.length - 1];
 };
 
 
