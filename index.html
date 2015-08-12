@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
+	
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
@@ -8,73 +9,67 @@
 	<meta name="description" content="">
 	<meta name="author" content="JOO">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
-
-    <script src="mascot.js"></script>
-	<script src="core.js"></script>
 	
-	<script>
-        var url = 'http://www.naver.com';
-        var year = 2015;
-        var month = 4;
-        var day = 9;
-        var str = '<a href="{0}">{1}/{2}/{3}</a>';
-        var link = str.format(url, year, month, day);
-        //console.log(link);
-        
-        var numArr = [9,3,6,8,3,2,11];
-        //console.log(getMaxOfArray(numArr));
-        
-        var num = 98765432123456789;
-        //console.log(num.toLocaleString());
-        
-        var aaa= [1,2,3];
-        //console.log(aaa);
-        aaa.clear();
-        //console.log(aaa);
-        
-        //console.log( (1234567890).byte() );
-        
-        //console.log( (10).div(0) );
-        
-        var phone = '010-7108-2764';
-        var tel = '055-687-2764';
-        //console.log( isValidPhone(phone) );
-        //console.log( isValidPhone(tel) );
-        
-        var email1 = 'abc@naver.com';
-        var email2 = 'bar.ba@naver.com';
-        var email3 = 'bar.baba@google.co.kr';
-        var email4 = '@abc@naver.com';
-        var email5 = 'bar@ba@naver.com';
-        var email6 = 'bar.b/aba@goo_g-le.co.kr';
-        //console.log( isValidEmail(email1) );
-        //console.log( isValidEmail(email2) );
-        //console.log( isValidEmail(email3) );
-        //console.log( isValidEmail(email4) );
-        //console.log( isValidEmail(email5) );
-        //console.log( isValidEmail(email6) );
-        
-        var 문자열 = '가나다라마바사';
-        var 영어문자열 = 'abcdefg';
-        //console.log(문자열.getByte());
-        //console.log(영어문자열.getByte());
-        
-        var 주민등록번호1 = '880411-1912777';
-        var 주민등록번호2 = '880411-1912777-123';
-        var 주민등록번호3 = '880411A-191277';
-        var 주민등록번호4 = 'abcd-191277';
-        var 주민등록번호5 = '880411-def';
-        var 주민등록번호6 = '880411_191211';
-        //console.log( isValidPersonalNo(주민등록번호1) );
-        //console.log( isValidPersonalNo(주민등록번호2) );
-        //console.log( isValidPersonalNo(주민등록번호3) );
-        //console.log( isValidPersonalNo(주민등록번호4) );
-        //console.log( isValidPersonalNo(주민등록번호5) );
-        //console.log( isValidPersonalNo(주민등록번호6) );
-        
-    </script>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+   
+    <script src="js/mascot.js"></script>
+	<script src="js/core.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+		
 </head>
 <body>
+	<br/>
+	<div class="container">
+		<div class="header clearfix">
+			<nav>
+				<ul class="nav nav-pills pull-right">
+					<li role="presentation" class="active"><a href="#">홈</a>
+					</li>
+					<li role="presentation"><a href="#">프로필</a>
+					</li>
+					<li role="presentation"><a href="#">연락처</a>
+					</li>
+				</ul>
+			</nav>
+			<h3 class="text-muted">샘플용(랭킹뉴스)</h3>
+		</div>
+		<hr/>
+		
+		<div class="jumbotron">
+			<h1>우표 세상서도 홀대받는 독립운동가</h1>
+			<p class="lead">일제강점기 독립군의 이야기를 그린 영화 '암살'이 최근 흥행하면서 독립운동가들에 대한 관심이 커지고 있다. 우리 현대사는 항일 투쟁 중 최후를 맞거나 살아서도 정당한 대우를 받지 못한 수많은 독립운동가와 그의 후손들을 외면해 왔다. ‘국가의 역사와 문화를 표현하고 있어 동시대의 사실적인 자료로 인정받는다’는 우표의 소재로서도 독립운동가들은 홀대를 받았다...</p>
+			<p><a class="btn btn-lg btn-success" href="detail.html" role="button">자세히 보기</a>
+			</p>
+		</div>
 
+		<div class="row marketing">
+			<div class="col-lg-6">
+				<h4>티아라 태도논란</h4>
+				<p>티아라 태도논란 티아라 태도 논란, 알고 보니 팬들의 오해? “물의 일으켜 죄송” '아이돌 육상대회'에서 티아라 불성실한 태도를 지적하며 태도논란을 일으킨 팬들이 오해에서 비롯된 일이라고 해명했다. 10 일 경기도...</p>
+
+				<h4>위안화 평가절하</h4>
+				<p>독일, 프랑스 등 유럽의 주요 증시도 위안화 평가절하의 영향권에서 벗어나지 못했다. 영국 런던 FTSE 100 지수는 1.1%, 독일 프랑크푸르트의 DAX 30지수는 2.7%, 프랑스 파리의 CAC 40 지수는 1.9% 각각 떨어졌다. 증시...</p>
+
+				<h4>오늘 말복</h4>
+				<p>'오늘 말복, 막바지 더위 속 일부지역 비' 말복인 오늘(12일) 서울 낮 최고 기온이 32도로 막바지 더위가 예상된다. 남부지방과 제주, 강원영동 등 비가 올 것으로...</p>
+			</div>
+
+			<div class="col-lg-6">
+				<h4>택시 홍수아</h4>
+				<p>택시’ 홍수아가 악플에 대한 자신의 소신을 드러냈다. 8월11일 방송된 tvN ‘현장토크쇼 택시’에서는 서유리와 홍수아가 게스트로 출연한 가운데 ‘실검녀 특집’편이 그려졌다. 이날 홍수아는...</p>
+
+				<h4>국회 국방위</h4>
+				<p>북한군 목함지뢰 사건 등 긴급현안보고 받는다 국회 국방위 국회 국방위원회는 12일 전체회의를 통해 북한 목함지뢰 사건과 기무사 해킹...</p>
+
+				<h4>18초 김희정</h4>
+				<p>물에 젖은 비키니 자태 '아찔' 완벽 글래머 몸매 배우 김희정이 '18초'에 출연해 화제인 가운데, 과거 공개된 비키니 사진이 주목받고 있다. 김희정은 과거 한 음료 회사의 모델로 활동할...</p>
+			</div>
+		</div>
+		
+		<hr/>
+		<footer class="footer">
+			<p>&copy; Company 2015</p>
+		</footer>
+	</div>
 </body>
 </html>
