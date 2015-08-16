@@ -11,6 +11,8 @@ ga('create', 'UA-66202604-1', 'auto');
 ga('require', 'displayfeatures');
 ga('require', 'linkid', 'linkid.js');
 ga('send', 'pageview');
+
+
 /*
                .:+*#%@@@@:                                             =++:
           .+#@@@@@%*+=::                                              +@@@%
@@ -26,7 +28,7 @@ ga('send', 'pageview');
  .++=:.                                                                                                  +@@@@
                                                                                                 ***==:..#@@@@
                                                                                                 +*#@@@@@@@@#
-                                                                                                
+
  String.prototype.format    {숫자} 중괄호의 숫자를 넘어온 인수로 변환시킨다
  String.prototype.getByte   문자열의 바이트 길이를 반환한다
  isValidFormat(str, reg)    사용자가 정의한 포맷 형식인지 체크한다
@@ -42,13 +44,14 @@ ga('send', 'pageview');
  */
 String.prototype.format = function() {
     var theString = this;
-    
+
     for(var i=0; i<arguments.length; i++) {
         var regExp = new RegExp('\\{'+i+'\\}', 'gm');
         theString = theString.replace(regExp, arguments[i]);
     }
 
     return theString;
+
 };
 
 /**
@@ -71,7 +74,7 @@ String.prototype.getByte = function() {
  */
 function isValidFormat(str, reg) {
     if (reg.test(str)) {
-        return true;    
+        return true;
     }
     return false;
 }
@@ -126,11 +129,11 @@ function isValidPersonalNo(str) {
  * 숫자값을 Byte로 인식하여 값의 크기에 따라 KB,MB,GB의 형식으로 반환합니다
  * @return {String}
  */
-Number.prototype.byte = function() { 
+Number.prototype.byte = function() {
     var n_unit = "KB";
     var myByte = this / 1024;
 
-    if (myByte / 1024 > 1) { 
+    if (myByte / 1024 > 1) {
         n_unit = "MB";
         myByte = myByte / 1024;
     }
@@ -272,7 +275,7 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-/** 
+/**
  * 숫자의 진수를 조정한다
  * @param {String} type
  * @param {Number} value
@@ -281,17 +284,17 @@ function getRandomInt(min, max) {
  */
 (function(){
     function decimalAdjust(type, value, exp) {
-        
+
         if (typeof exp === 'undefined' || +exp === 0) {
           return Math[type](value);
         }
         value = +value;
         exp = +exp;
-        
+
         if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
           return NaN;
         }
-        
+
         // Shift
         value = value.toString().split('e');
         value = Math[type](+(value[0] + 'e' + (value[1] ? (+value[1] - exp) : -exp)));
@@ -299,7 +302,7 @@ function getRandomInt(min, max) {
         value = value.toString().split('e');
         return +(value[0] + 'e' + (value[1] ? (+value[1] + exp) : exp));
     }
-    
+
     /**
      * 반올림 소숫점 제어
      */
@@ -324,5 +327,5 @@ function getRandomInt(min, max) {
           return decimalAdjust('ceil', value, exp);
         };
     }
-    
+
 })();
